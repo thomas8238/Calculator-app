@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="304dp"
         android:layout_marginEnd="16dp"
+        android:onClick="findQuotient"
         android:text="÷"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        android:onClick="findDifference"
         android:text="-"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        android:onClick="findProduct"
         android:text="X"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,10 +48,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        android:onClick="findSum"
         android:text="+"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/muliplicationButton" />
+
 
     <EditText
         android:id="@+id/firstValue"
@@ -57,21 +62,32 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="180dp"
         android:ems="10"
-        android:hint="Enter first Value"
-        android:inputType="textPersonName"
+        android:hint="Enter First Value"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/SecondValue"
-        android:layout_width="163dp"
-        android:layout_height="49dp"
+        android:layout_width="182dp"
+        android:layout_height="51dp"
         android:layout_marginTop="180dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Enter Second Value"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="282dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="240dp"
+        android:hint="Result:"
+        android:text=""
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
