@@ -81,10 +81,11 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="282dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="240dp"
-        android:hint="Result:"
+        android:layout_width="302dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="196dp"
+        android:hint="Answer:"
         android:text=""
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"

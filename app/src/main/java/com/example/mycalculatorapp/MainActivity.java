@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         numberDifferenceTV.setText("Answer:  " + difference);
     }
     public void findQuotient(View view) {
+        DecimalFormat n = new DecimalFormat("##.0000");
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberQuotientTV = findViewById(R.id.result);
@@ -54,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
         double quotient = (double)num1/num2;
-        quotient.decimalFormat;
 
-        numberQuotientTV.setText("Answer:  " + quotient);
+
+        numberQuotientTV.setText("Answer:  " + n.format(quotient));
     }
 }
