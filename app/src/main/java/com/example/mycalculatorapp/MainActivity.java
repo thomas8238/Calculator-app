@@ -18,7 +18,16 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberSumTV = findViewById(R.id.result);
-
+        if(number2ET.getText().length() == 0) {
+            number2ET.setText("0");
+        }
+        if(number1ET.getText().length() == 0) {
+            number1ET.setText("0");
+        }
+        if(number1ET.getText().length() == 0 && number2ET.getText().length() == 0) {
+            number1ET.setText("0");
+            number2ET.setText("0");
+        }
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
         int sum = num1 + num2;
@@ -29,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberProductTV = findViewById(R.id.result);
+
+        if(number2ET.getText().length() == 0) {
+            number2ET.setText("1");
+        }
+        if(number1ET.getText().length() == 0) {
+            number1ET.setText("1");
+        }
 
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
@@ -41,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberDifferenceTV = findViewById(R.id.result);
 
+        if(number2ET.getText().length() == 0) {
+            number2ET.setText("0");
+        }
+        if(number1ET.getText().length() == 0) {
+            number1ET.setText("0");
+        }
+
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
         int difference = num1 - num2;
@@ -52,6 +75,17 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberQuotientTV = findViewById(R.id.result);
+
+        if(number2ET.getText().length() == 0) {
+            number2ET.setText("1");
+        }
+        if(number1ET.getText().length() == 0) {
+            number1ET.setText("1");
+        }
+        if(number1ET.getText().length() == 0 && number2ET.getText().length() == 0) {
+            number1ET.setText("0");
+            number2ET.setText("0");
+        }
 
         int num1 = Integer.parseInt((number1ET.getText().toString()));
         int num2 = Integer.parseInt((number2ET.getText().toString()));
