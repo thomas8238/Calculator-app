@@ -15,8 +15,10 @@
         android:onClick="findQuotient"
         android:text="÷"
         android:textSize="24sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#703FC8" />
 
     <Button
         android:id="@+id/subtractionButton"
@@ -27,8 +29,10 @@
         android:onClick="findDifference"
         android:text="-"
         android:textSize="24sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/additionButton" />
+        app:layout_constraintTop_toBottomOf="@+id/additionButton"
+        app:rippleColor="#703FC8" />
 
     <Button
         android:id="@+id/muliplicationButton"
@@ -39,8 +43,10 @@
         android:onClick="findProduct"
         android:text="X"
         android:textSize="24sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divisionButton" />
+        app:layout_constraintTop_toBottomOf="@+id/divisionButton"
+        app:rippleColor="#703FC8" />
 
     <Button
         android:id="@+id/additionButton"
@@ -51,9 +57,10 @@
         android:onClick="findSum"
         android:text="+"
         android:textSize="24sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/muliplicationButton" />
-
+        app:layout_constraintTop_toBottomOf="@+id/muliplicationButton"
+        app:rippleColor="#703FC8" />
 
     <EditText
         android:id="@+id/firstValue"
@@ -90,5 +97,19 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clear_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="clear"
+        android:text="CLEAR"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#703FC8"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
