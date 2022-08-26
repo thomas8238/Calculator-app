@@ -21,14 +21,17 @@ public class MainActivity extends AppCompatActivity {
     public void clear(View view) {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
+        TextView resultTV = findViewById(R.id.result);
         number1ET.setText("");
         number2ET.setText("");
+        resultTV.setText("Answer:");
     }
     public void findSum(View view) {
         DecimalFormat n = new DecimalFormat("##.0000");
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberSumTV = findViewById(R.id.result);
+        numberSumTV.setText("Answer:");
         if(number1ET.getText().length() == 0 || number2ET.getText().length() == 0) {
             toastNoVal(view);
             return;
@@ -37,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             double sum = num1 + num2;
+            if(sum> 2147483647) {
+                toastExecute(view);
+                return;
+            }
             if(sum%1 ==0) {
                 numberSumTV.setText("Answer:  " + (int)sum);
             } else {
@@ -52,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberProductTV = findViewById(R.id.result);
+        numberProductTV.setText("Answer:");
         if(number1ET.getText().length() == 0 || number2ET.getText().length() == 0) {
             toastNoVal(view);
             return;
@@ -60,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             double product = num1 * num2;
+            if(product> 2147483647) {
+                toastExecute(view);
+                return;
+            }
             if(product%1 ==0) {
                 numberProductTV.setText("Answer:  " + (int)product);
             } else {
@@ -75,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberDifferenceTV = findViewById(R.id.result);
+        numberDifferenceTV.setText("Answer:");
         if(number1ET.getText().length() == 0 || number2ET.getText().length() == 0) {
             toastNoVal(view);
             return;
@@ -83,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             double difference = num1 - num2;
+            if(difference> 2147483647) {
+                toastExecute(view);
+                return;
+            }
             if(difference%1 ==0) {
                 numberDifferenceTV.setText("Answer:  " + (int)difference);
             } else {
@@ -98,15 +115,19 @@ public class MainActivity extends AppCompatActivity {
         EditText number1ET = findViewById(R.id.firstValue);
         EditText number2ET = findViewById(R.id.SecondValue);
         TextView numberQuotientTV = findViewById(R.id.result);
+        numberQuotientTV.setText("Answer:");
         if(number1ET.getText().length() == 0 || number2ET.getText().length() == 0) {
             toastNoVal(view);
             return;
         }
         try {
-
             double num1 = Double.parseDouble((number1ET.getText().toString()));
             double num2 = Double.parseDouble((number2ET.getText().toString()));
             double quotient = (double) num1/num2;
+            if(quotient> 2147483647) {
+                toastExecute(view);
+                return;
+            }
             if(quotient%1 ==0) {
                 numberQuotientTV.setText("Answer:  " + (int)quotient);
             } else {
