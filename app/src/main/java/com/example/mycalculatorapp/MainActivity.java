@@ -144,5 +144,6 @@ public class MainActivity extends AppCompatActivity {
     public void toastNoVal(View v) {
         Toast toast = Toast.makeText(getApplicationContext(), "Enter a value into each text box", Toast.LENGTH_SHORT);
         toast.show();
+        // why?
     }
 }
